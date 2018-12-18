@@ -1,0 +1,10 @@
+DEBUG:root:This message should go to the log file
+INFO:root:So should this
+WARNING:root:And this, too
+WARNING:root:warning info
+CRITICAL:root:server is down
+11/29/2018 03:32:56 PM This message should go to the log file
+11/29/2018 03:32:56 PM So should this
+11/29/2018 03:32:56 PM And this, too
+11/29/2018 03:32:56 PM warning info
+11/29/2018 03:32:56 PM server is down
