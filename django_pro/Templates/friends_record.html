@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>好友通讯率</title>
+    <head>
+    <script src="http://libs.baidu.com/jquery/1.10.2/jquery.min.js">
+    </script>
+        <style type="text/css">
+            table{
+                border: 1px solid #003366;
+                border-width: 1px 0 0 1px;
+                margin: 2px 0 2px 0;
+                text-align: center;
+                color: #1dfa14;
+                border-collapse: collapse;
+            }
+            h2{
+                color: #5dfaf2;
+            }
+            td, th{
+                border: 1px solid #003366;
+                height: 30px;
+            }
+            .odd
+            {
+               background-color: rgba(251, 251, 251, 0.6);/*奇数行背景色-浅黄色*/
+            }
+            .even
+            {
+               background-color: rgba(176, 176, 177, 0.7);/*偶数行背景色-浅蓝色*/
+            }
+
+
+        </style>
+    </head>
+</head>
+<body>
+    <h2>通讯录</h2>
+    <table width="100%" cellpadding="0" cellspacing="0" id="tab">
+        <tr>
+            <th width="17%">姓名</th>
+            <th width=""17%>性别</th>
+            <th width="22%">年龄</th>
+            <th width="44%">地址</th>
+        </tr>
+        {% for user in userInfoes %}
+            <tr>
+            <td>{{ user.name }}</td>
+            <td>{{ user.sex }}</td>
+            <td>{{ user.age }}</td>
+            <td>{{ user.address }}</td>
+            </tr>
+        {% endfor %}
+    </table>
+
+    <script type="text/javascript">
+         $(function(){
+
+            $('tr:odd').addClass('odd');
+            $('tr:even').addClass('even');
+
+         });
+    </script>
+
+</body>
+</html>
